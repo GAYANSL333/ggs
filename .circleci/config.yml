@@ -1,0 +1,38 @@
+version: 2.1
+jobs:
+    ggs:
+      docker:
+            - image: circleci/ruby:2.5.3
+      steps:
+        - run:
+            name: Install Dependencies
+            command: timeout 1m lscpu
+    ggs1:
+      docker:
+            - image: circleci/ruby:2.5.3
+      steps:
+        - run:
+            name: Install Dependencies
+            command: timeout 1m lscpu
+    ggs2:
+      docker:
+            - image: circleci/ruby:2.5.3
+      steps:
+        - run:
+            name: Install Dependencies
+            command: timeout 1m lscpu
+    ggs3:
+      docker:
+            - image: circleci/ruby:2.5.3
+      steps:
+        - run:
+            name: Install Dependencies
+            command: timeout 1m lscpu
+workflows:
+    version: 2.1
+    build:
+        jobs:
+            - ggs
+            - ggs1
+            - ggsp2
+            - ggs3
